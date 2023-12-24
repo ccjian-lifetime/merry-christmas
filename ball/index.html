@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Merry Christmas</title>
-  <audio autoplay="autoplay" controls="controls" loop="loop" preload="auto" src="No_room_at_the_inn.mp3">你的浏览器不支持audio标签</audio>
+  <!-- <audio id="bgMusic" autoplay="autoplay" controls="controls" loop="loop" preload="auto" src="No_room_at_the_inn.mp3">你的浏览器不支持audio标签</audio> -->
+  <audio id="bgMusic" autoplay="autoplay" controls="controls" loop="loop" preload="auto" src="This_Christmas.mp3">你的浏览器不支持audio标签</audio>
   <link rel="stylesheet" type="text/css" href="style.css" >
 </head>
 
@@ -178,4 +179,12 @@
 
 </html>
 <script src="snow.js"></script>
+<script>
+	
+	var audio = document.getElementById("bgMusic");
+	 
+	//播放(继续播放)
+	audio.play();
+	
+</script>
 <style>html,body{margin:0;height:100%;}</style>

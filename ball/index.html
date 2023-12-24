@@ -179,48 +179,15 @@
 
 </html>
 <script src="snow.js"></script>
+<script src="//res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 <script>
 	
 	var audio = document.getElementById("bgMusic");
 
-  applyPlayConfirm();
-  playWarn();
-	 
-  // 提示音弹窗，需要用户手动点一次才可以让浏览器播放音频
-  function  applyPlayConfirm() {
-    const audio = document.querySelector("audio");
-    this.$confirm("请开启本次报警声音提醒", "提示", {
-      type: "info",
-      showClose: false,
-      showCancelButton: false,
-      closeOnPressEscape: false,
-      closeOnClickModal: false,
-      confirmButtonText: "确定",
-      callback: () => {
-        // 用户点击过后 即可播放
-        audio.play();
-      },
-    });
-  }
- 
-  // 申请播放音频，只需用户点击页面任意位置
-  function  playWarn() {
-    const audio = document.querySelector("audio");
-    let startPlayPromise = audio.play();
-    if (startPlayPromise !== undefined) {
-      startPlayPromise
-        .catch((error) => {
-          if (error.name == "NotAllowedError") {
-            this.applyPlayConfirm();
-          } else {
-            // Handle a load or playback error
-          }
-        })
-        .then(() => {
-          // Start whatever you need to do only after playback
-        });
-    }
-  }
-	
+  // 播放音频
+document.addEventListener('WeixinJSBridgeReady', function() {
+  audio.play(); //安卓苹果均有效
+}, false);
+
 </script>
 <style>html,body{margin:0;height:100%;}</style>

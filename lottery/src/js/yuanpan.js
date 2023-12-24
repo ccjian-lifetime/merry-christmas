@@ -7,11 +7,11 @@ var localshang=1;
 $("#lotteryBtn").click(function () {
     console.log(localshang)
     localshang++
-    if (localshang == 2 || shang == 2) {
+    if (localshang == 2 || shang == 1) {
         mToast("您还有最后1次机会");
         var num = parseInt(Math.random() * 50+50);
         console.log(num)
-        num = 60
+        num = 100
         if (num >= 0 && num < 50) {
             rotateFunc(1, -110, "二等奖 800元"); //
             var award2 = "二等奖 800元";
@@ -23,7 +23,7 @@ $("#lotteryBtn").click(function () {
         // num = num + 50
         // num = parseInt(Math.random() * 50+50);
         if (num >= 50) {
-            rotateFunc(1, -20, "海参 5头"); //
+            rotateFunc(1, -65, "海参 5头"); // -65 谢谢参与
             var award2 = "海参 5头";
             wyaward = award2;
             $('.thanks').show();

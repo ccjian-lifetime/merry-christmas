@@ -2,7 +2,7 @@
 var letter = [
     "<<< Merry Christmas >>>",
     // "Chúc Dung (biệt danh Diệp xinh đẹp cute :) ) có một mùa giáng sinh an lành và ấm áp bên người thân và bạn bè :) Nghe nhạc zui zẻ nha!!!",
-    "To cherie (beautiful and cute girl:) ) Hope you enjoy the happiness of Christmas and all the trimmings. :) Nghe nhạc zui zẻ nha!!!", 
+    "To cherie (beautiful and cute girl:) ) Hope you enjoy the happiness of Christmas and all the trimmings. :) !!", 
 
     ];
 
